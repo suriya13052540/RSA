@@ -1,0 +1,19 @@
+.position{
+max-width: 400px;
+margin: auto;
+}
+.center{
+    margin: auto;
+   
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0 0 0px;
+}
+
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'

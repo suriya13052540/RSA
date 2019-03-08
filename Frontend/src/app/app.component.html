@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+   <div class=center><span>RSA Encryption And Decrytion Files </span></div>
+
+   <button mat-icon-button [matMenuTriggerFor]="menu">
+    Menu<mat-icon>home</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/en']">
+      <mat-icon>flight_land</mat-icon>
+      <span>Encrypt File</span>
+    </button>
+
+    <button mat-menu-item [routerLink]="['/de']">
+      <mat-icon>flight_takeoff</mat-icon>
+      <span>Decrypt File</span>
+    </button>
+
+   
+  </mat-menu>
+
+</mat-toolbar>
+<router-outlet></router-outlet>

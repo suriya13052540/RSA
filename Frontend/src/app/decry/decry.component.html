@@ -1,0 +1,42 @@
+<br>
+<br>
+<mat-card class="position">
+<div *ngIf="currentFileUpload" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%</div>
+</div>
+<div class="center">
+<button class="center" mat-raised-button color="warn">
+<label class="btn btn-default">
+  <input class="center" type="file" (change)="selectFile($event)">
+</label>
+</button>
+</div>
+<br>
+เลือกไฟล์ที่ต้องการถอดรหัส
+<br><br>
+<button  class = "center" mat-raised-button color="primary" [disabled]="!selectedFiles" (click)="uploaden()">Upload Encryption File</button>
+<br>
+<br>
+<div *ngIf="currentFileUploadkey" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progresskey.percentage}}"
+    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%</div>
+</div>
+<div class="center">
+<button class="center" mat-raised-button color="warn">
+<label class="btn btn-default">
+  <input class="center" type="file" (change)="selectFilekey($event)">
+</label>
+</button>
+</div>
+<br>
+ใส่กุญแจเพื่อถอดรหัส
+<br><br>
+<button  class = "center" mat-raised-button color="primary" [disabled]="!selectedFileskey" (click)="uploadkey()">Upload Key File</button>
+<br>
+<br>
+<button  class = "center" mat-raised-button color="primary"  (click)="downloadDecrypFile()">Download Decryption File</button>
+</mat-card>
+
